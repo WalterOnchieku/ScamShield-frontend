@@ -15,8 +15,8 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
-import { IdeActivityBar } from "@/components/ide-activity-bar";
-import { IdeHeader } from "@/components/ide-header";
+import IdeActivityBar from "@/components/layout/IdeActivityBar";
+import IdeHeader from "@/components/layout/IdeHeader";
 
 const SAFETY_CHECKS = [
   {
@@ -123,7 +123,7 @@ export default function SafetyPage() {
     <main className="ide-shell">
       <IdeHeader />
 
-      <div className="ide-body">
+      <div className="ide-body history-body">
         <IdeActivityBar activePage="safety" />
 
         <section
