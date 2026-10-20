@@ -2235,3 +2235,37 @@ body {
     display: none;
   }
 }
+
+/*
+ * History Page Layout Fix
+ * Purpose: Allow the history workspace to scroll independently
+ * while keeping the IDE header, activity bar, and status bar intact.
+ */
+
+.ide-shell > .ide-body {
+  min-width: 0;
+  min-height: 0;
+}
+
+.ide-shell > .ide-body > .ide-main {
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*
+ * History Page Layout
+ * Purpose: Use only the activity bar and main workspace because
+ * the history page does not render a separate sidebar.
+ */
+.history-body {
+  grid-template-columns: 48px minmax(0, 1fr);
+}
+
+.history-body > .ide-main {
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
