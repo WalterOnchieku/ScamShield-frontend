@@ -106,12 +106,15 @@ export default function HistoryPage() {
       <IdeHeader />
 
       {/* Main IDE Layout */}
-      <div className="ide-body">
+      <div className="ide-body history-body">
         {/* Narrow Activity Bar */}
         <IdeActivityBar activePage="history" />
 
         {/* History Workspace Content */}
-        <section className="ide-main overflow-y-auto" aria-label="Analysis history records">
+        <section
+  className="ide-main min-w-0 min-h-0 overflow-x-hidden overflow-y-auto"
+  aria-label="Analysis history records"
+>
           <div className="mx-auto max-w-6xl px-6 py-10">
             <motion.div
               initial={reduceMotion ? false : { opacity: 0, y: 12 }}
